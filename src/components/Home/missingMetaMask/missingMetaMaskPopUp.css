@@ -1,0 +1,46 @@
+.missingMetaMaskPopup {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background-color: var(--whiteColorDeam);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .missingMetaMaskPopup .popupHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: var(--blackColor);
+      text-align: left;
+    }
+  
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+  
+      .icon {
+        font-size: 2rem;
+        color: var(--PrimaryColor);
+      }
+    }
+  }
+  
+  .missingMetaMaskPopup .popupContent {
+    text-align: left; /* Align content to the left */
+    p {
+        font-size: 13px;
+      margin: 10px 0;
+      color: red;
+    }
+  }
+  

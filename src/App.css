@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@517&display=swap');
+
+* {
+  padding:  0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* colors and styling  */
+:root {
+  --PrimaryColor: rgb(74, 144, 226); /* Blue color for primary elements */
+  --secondaryColor: rgb(128, 70, 228); /* Orange color for secondary elements */
+  --gradientColor: linear-gradient(to right, #3498db, #8e44ad); /* Gradient color for backgrounds */
+  --gradientColorGreen: linear-gradient(to right, #00ff87, #60efff); /* Gradient color for backgrounds */
+  --whiteColor: rgb(255, 255, 255); /* White color for text and backgrounds */
+  --blackColor: rgb(0, 0, 0); /* Black color for text and other elements */
+  --textColor: rgb(51, 51, 51); /* Default text color */
+  --whiteColorDeam: rgb(248, 248, 248); /* Lighter shade of white for backgrounds */
+  --greyTextColor: rgb(136, 136, 136); /* Grey color for additional text */
+  --inputColor: rgb(236, 240, 241); /* Background color for input fields */
+  --bodyColor: rgb(245, 245, 245); /* Background color for the body */
+  --cardBG: rgb(236, 240, 241); /* Background color for cards or containers */
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon{
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.grid{
+  display: grid;
+  align-items: center;
+}
+
+.btn{
+  padding: .6rem 1.5rem;
+  background: var(--gradientColor);
+  border-radius: 3rem;
+  border:  none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btnGo{
+  padding: .6rem 1.5rem;
+  background: var(--gradientColor);
+  border-radius: 3rem;
+  border:  none;
+  outline: none;
+  cursor: pointer;
+  color: var(--whiteColor);
+}
+
+.btnGreen{
+  padding: .6rem 1.5rem;
+  background: var(--gradientColorGreen);
+  border-radius: 3rem;
+  border:  none;
+  outline: none;
+  cursor: default;
+  color: var(--blackColor);
+}
+
+.btnMint{
+  margin-top: 20px;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  background: var(--gradientColor);
+  border-radius: 3rem;
+  border:  none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+  color: var(--whiteColor);
+}
+
+.btn a{
+  color: var(--whiteColor);
+  font-weight: 500;
+}
+
+.btn:hover{
+  background: var(--secondaryColor);
+}
+
+.btnMint:hover{
+  background: var(--secondaryColor);
+}
+
+img, video{
+  width: 100%;
+  height: auto;
+}
+
+input{
+  font-size: 100%;
+}
+
+body{
+  background: var(--bodyColor);
+}
+
+
+@media screen and (min-width: 1240px) {
+  .container{
+    width: 80% !important;
+    margin: auto !important;
+  }
+
+  .section{
+    padding: 6rem 0 4rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body{
+    zoom: 1.7;
+  }
+}

@@ -1,0 +1,332 @@
+:root {
+    --PrimaryColor: rgb(74, 144, 226); /* Blue color for primary elements */
+    --secondaryColor: rgb(128, 70, 228); /* Orange color for secondary elements */
+    --gradientColor: linear-gradient(to right, #3498db, #8e44ad); /* Gradient color for backgrounds */
+    --whiteColor: rgb(255, 255, 255); /* White color for text and backgrounds */
+    --blackColor: rgb(0, 0, 0); /* Black color for text and other elements */
+    --textColor: rgb(51, 51, 51); /* Default text color */
+    --whiteColorDeam: rgb(248, 248, 248); /* Lighter shade of white for backgrounds */
+    --greyTextColor: rgb(136, 136, 136); /* Grey color for additional text */
+    --inputColor: rgb(236, 240, 241); /* Background color for input fields */
+    --bodyColor: rgb(245, 245, 245); /* Background color for the body */
+    --cardBG: rgb(236, 240, 241); /* Background color for cards or containers */
+}
+
+.home {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100vh;
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(47, 106, 127);
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        mix-blend-mode: hard-light;
+    }
+
+    video {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+    }
+
+    .homeContent {
+        width: 100%;
+        height: max-content;
+        padding: 8rem 1.5rem 3rem;
+        display: flex;
+        row-gap: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        margin: auto;
+        color: var(--whiteColor);
+        z-index: 100;
+        text-align: center;
+
+        .textDiv {
+            padding: 2rem 0;
+
+            .smallText {
+                font-size: 18px;
+                text-transform: uppercase;
+                cursor: default;
+            }
+
+            .homeTitle {
+                position: relative;
+                font-size: 5rem;
+                cursor: default;
+            }
+        }
+
+        .contentDescription {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            max-width: 400px;
+            height: auto;
+            padding: 1rem;
+            color: var(--whiteColor);
+
+            p {
+                text-align: left;
+                font-size: 1rem;
+                line-height: 1.5;
+                margin-bottom: 2rem;
+                opacity: 70%;
+            }
+        }
+    }
+
+    
+    .popupContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+      }
+      
+      .mintPopup {
+        background: var(--whiteColorDeam);
+        padding: 20px;
+        max-width: 400px;
+        width: 100%;
+        border-radius: 8px;
+      
+        .popupHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+      
+          h2 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--blackColor);
+          }
+      
+          button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--PrimaryColor);
+          }
+        }
+      
+        .popupContent {
+            display: flex;
+            flex-direction: column;
+            p{
+                color: orange;
+                text-align: left;
+                margin: 5px 0;
+                padding: .2rem;
+                margin-bottom: 10px;
+            }
+          
+            .inputGroup {
+              margin-bottom: 10px;
+              align-items: flex-start;
+          
+              /* label {
+                font-size: 1rem;
+                margin-bottom: 5px;
+                color: var(--blackColor);
+                align-self: flex-start;
+
+              } */
+          
+              input {
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                border: 1px solid var(--blackColor);
+                border-radius: 5px;
+                font-size: 1rem;
+                margin-bottom: 10px;
+              }
+            }
+
+            .buttonGroup {
+                display: flex;
+                justify-content: flex-end;
+            
+                button {
+                  margin-left: 10px;
+                  padding: 8px 16px;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  font-size: 1rem;
+                  transition: background-color 0.3s;
+                }
+            
+                .cancelButton {
+                  background-color: transparent;
+                  color: var(--blackColor);
+                  border: black solid 1px;
+                }
+
+                .cancelButton:hover{
+                    background-color: rgba(199, 199, 199, 0.565);
+                }
+            
+                .submitButton {
+                  background-color: var(--PrimaryColor);
+                  color: var(--whiteColor);
+                }
+
+                .submitButton:hover{
+                    background-color: var(--secondaryColor);
+                  }
+              }
+          }
+    }
+
+    .successPopup {
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        background-color: var(--whiteColorDeam);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    
+        .popupHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+    
+          h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--blackColor);
+          }
+    
+          button {
+            background: none;
+            border: none;
+            cursor: pointer;
+    
+            .icon {
+              font-size: 2rem;
+              color: var(--PrimaryColor);
+            }
+          }
+        }
+    
+        .popupContent {
+          p {
+            margin: 10px 0;
+            color: green;
+          }
+        }
+      }
+
+      .loadingSpinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       
+       .spinner {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+       }
+       
+       @keyframes spin {
+         0% { transform: rotate(0deg); }
+         100% { transform: rotate(360deg); }
+       }
+       
+}
+
+
+@media screen and (min-widht: 500px) {
+    .home{
+        .homeContent{
+            .textDiv{
+                .smallText{
+                    font-size: 16px;
+                }
+
+                .homoTitle{
+                    position: relative;
+                    font-size: 2.3rem;
+                    width: max-content;
+
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        background: var(--secondaryColor);
+                        height: 5px;
+                        width: 145px;
+                        right: 0px;
+                        bottom: 5px;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            /* .contentDescription{
+                grid-template-columns: repeat(2,1fr);
+            } */
+        }
+    }
+}
+
+
+@media screen and (min-widht: 660px) {
+    .home{
+        .contentDescription{
+            padding: 2rem 1rem;
+            /* grid-template-columns: repeat(3,1fr); */
+        }
+    }
+}
+
+@media screen and (min-widht: 940px) {
+    .home{
+        height: 85vh;
+    }
+}
+
+@media screen and (min-widht: 1240px) {
+    .home{
+        height: 800vh;
+
+        .homeContent{
+            padding-left: 0;
+            padding-right: 0;
+
+            .contentDescription{
+                padding: 2rem 1rem;
+                /* grid-template-columns: repeat(3,1fr); */
+            }
+        }
+    }
+}
